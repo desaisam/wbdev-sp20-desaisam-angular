@@ -1,0 +1,8 @@
+<h3> Lesson Tab Component for module {{moduleId}}</h3>
+<ul class="list-group">
+    <li *ngFor="let lesson of lessons" class="list-group-item" [class]="{active : lessonId === lesson._id}">
+        <a routerLink="/details/modules/{{moduleId}}/lessons/{{lesson._id}}">
+            {{lesson.title}}
+        </a>
+    </li>
+</ul>
