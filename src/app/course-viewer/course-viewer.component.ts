@@ -17,7 +17,7 @@ export class CourseViewerComponent implements OnInit {
   }
   ngOnInit(): void {
     this.route.params.subscribe(params => this.courseId = params.courseId);
-    fetch(`https://wbdv-generic-server.herokuapp.com/api/jannunzi/courses/${this.courseId}`).
+    fetch(`https://wbdv-generic-server.herokuapp.com/api/desaisam/courses/${this.courseId}`).
       then(response => response.json()).
       then(course => this.course = course)
   }

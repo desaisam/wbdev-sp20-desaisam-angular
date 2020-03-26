@@ -1,8 +1,32 @@
-<h3> Lesson Tab Component for module {{moduleId}}</h3>
-<ul class="list-group">
-    <li *ngFor="let lesson of lessons" class="list-group-item" [class]="{active : lessonId === lesson._id}">
-        <a routerLink="/details/modules/{{moduleId}}/lessons/{{lesson._id}}">
-            {{lesson.title}}
-        </a>
-    </li>
-</ul>
+<!-- <h3> Lesson Tab Component for module {{moduleId}}</h3> -->
+
+<!-- <mat-toolbar color = 'primary' class = 'navbar'>
+        <!-- <div *ngFor="let lesson of lessons">
+            <a [routerLink]="['/#']" routerLinkActive="active-list-item"  class = "navbar-item">
+                {{lesson.title}}
+            </a>
+        </div>  -->
+
+<!-- <nav mat-tab-nav-bar>
+            <a mat-tab-link *ngFor="let lesson of lessons"> </a>
+            <a mat-tab-link >Disabled Link</a>
+          </nav>
+    </mat-toolbar> -->
+
+
+<nav class='navbar'>
+    <ul class="nav navbar-nav" *ngFor="let lesson of lessons">
+        <li class = "nav-pills" routerLinkActive="active current" >
+            <a routerLink="/details/courses/{{courseId}}/modules/{{moduleId}}/lessons/{{lesson._id}}">
+                {{lesson.title}}
+
+            </a>
+        </li>
+    </ul>
+
+</nav>
+
+
+<!-- "/details/modules/{{moduleId}}/lessons/{{lesson._id}}" -->
+
+<!-- [class]="{active : lessonId === lesson._id}" -->

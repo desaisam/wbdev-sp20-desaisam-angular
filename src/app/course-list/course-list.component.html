@@ -1,16 +1,43 @@
-<h1>Welcome to course Manager</h1>
-<h2>There are {{courses.length}} Courses</h2>
-<input [(ngModel)]="newCourseTitle" />
-<button (click)="createCourse(newCourseTitle)">Create Course</button>
-<ul>
-  <li *ngFor="let course of courses">
-    <a href="/details/{{course._id}}">
-      {{course.title}}
-    </a>
-    <button (click)="deleteCourse(course._id)">Delete </button>
-  </li>
+<!-- <h2>There are {{courses.length}} Courses</h2>
+<input [(ngModel)]="newCourseTitle" /> -->
+<!-- 
+<table class="table table-bordered">
+  <thead>
+    <tr>
+
+      <th> My Courses </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <i class="material-icons">
+        menu_book
+      </i>
+      <a href="/details/{{course._id}}" class = "course-title">
+        {{course.title}}
+      </a>
+    </tr>
+  </tbody>
+
+</table> -->
 
 
+<div class = "container course-list-group">
+  <ul class = 'list-group course-list'>
+    <h1>Welcome to Course Manager</h1>
+    <h2 class = "my-courses">My Courses : </h2>
+   
+    <li *ngFor="let course of courses" class = 'list-group-item course-list-item'>
+      <a routerLink= '/details/courses/{{course._id}}' >
+        <span class="material-icons">
+          library_books
+        </span>
+        {{course.title}}
+      </a>
+    </li>
+  </ul>
+</div>
 
-</ul>
-{{newCourseTitle}}
+
+ 
+<!-- {{newCourseTitle}} -->

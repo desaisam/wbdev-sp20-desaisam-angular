@@ -1,3 +1,9 @@
 .active a {
     color : white
 }
+
+.module-list {
+    font-family: "Oswald";
+    font-weight: bolder;
+    text-align: center;
+}

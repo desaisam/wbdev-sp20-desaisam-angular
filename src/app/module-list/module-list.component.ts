@@ -18,7 +18,7 @@ export class ModuleListComponent implements OnInit {
       title: ""
     }
   ]
-
+  courseTitle ="";
   moduleId = "";
   courseId = '';
   ngOnInit(): void {
@@ -27,6 +27,7 @@ export class ModuleListComponent implements OnInit {
       this.moduleId = params.moduleId;
     })
     this.service.findModulesForCourse(this.courseId).then(modules => this.modules = modules);
+    this.service.findCourseForCourseId(this.courseId).then(courses => this.courseTitle = courses.title);
   }
 
 }

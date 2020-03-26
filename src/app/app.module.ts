@@ -11,7 +11,11 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import { ModuleListServiceclient } from './services/ModuleListServiceClient';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import { LessonServiceClient } from './services/LessonServiceClient';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar'
+import {MatTabsModule} from '@angular/material/tabs'
+import {MatIcon} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { LessonServiceClient } from './services/LessonServiceClient';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatTabsModule
   ],
   providers: [CourseServiceClient, ModuleListServiceclient, LessonServiceClient],
   bootstrap: [AppComponent]

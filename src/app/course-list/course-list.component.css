@@ -1,0 +1,31 @@
+.course-title {
+  font-family: "Oswald";
+  font-weight: bolder;
+  font-size: 21px;
+  line-height: 24px;
+}
+
+
+.material-icons {
+  display: inline-flex;
+  vertical-align: top;
+}
+
+.course-list {
+    font-family: "Oswald";
+  font-weight: bolder;
+  text-align: center;
+}
+.course-list-item {
+    background-color : whitesmoke;
+}
+.my-courses{
+    text-align : center;
+    margin-bottom: 2rem;
+}
+.course-list-group{
+    max-width: 500px;
+}
+/* .table {
+    text-align: center;   
+ } */
