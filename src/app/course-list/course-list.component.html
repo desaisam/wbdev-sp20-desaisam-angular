@@ -22,22 +22,27 @@
 </table> -->
 
 
-<div class = "container course-list-group">
-  <ul class = 'list-group course-list'>
+<div class="container course-list-group">
+  <ul class='list-group course-list'>
     <h1>Welcome to Course Manager</h1>
-    <h2 class = "my-courses">My Courses : </h2>
-   
-    <li *ngFor="let course of courses" class = 'list-group-item course-list-item'>
-      <a routerLink= '/details/courses/{{course._id}}' >
+    <h2 class="my-courses">My Courses : </h2>
+
+    <li *ngFor="let course of courses" class='list-group-item course-list-item'>
+      <a class="float-left" routerLink='/details/courses/{{course._id}}'>
         <span class="material-icons">
           library_books
         </span>
         {{course.title}}
       </a>
+      <a class="float-right" href="/courses/{{course._id}}/quizzes">
+        Quizzes
+      </a>
+
     </li>
+
   </ul>
 </div>
 
 
- 
+
 <!-- {{newCourseTitle}} -->
