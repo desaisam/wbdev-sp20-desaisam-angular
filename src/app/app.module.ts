@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FontAwesomeModule} from '@fortawesome/angular-fontawesome'
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -17,7 +16,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatTabsModule } from '@angular/material/tabs'
-import { MatIcon } from '@angular/material/icon';
 import { QuizzesComponent } from './quizzes/quizzes.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { TrueFaleQuestionComponent } from './true-fale-question/true-fale-question.component';
@@ -38,7 +36,6 @@ import { QuestionServiceClient } from './services/QuestionServiceClient';
     MultipleChoiceQuestionComponent
   ],
   imports: [
-    FontAwesomeModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

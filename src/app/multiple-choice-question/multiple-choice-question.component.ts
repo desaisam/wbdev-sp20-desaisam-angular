@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-multiple-choice-question',
@@ -11,7 +11,6 @@ export class MultipleChoiceQuestionComponent implements OnInit {
   @Input()
   question = { _id: '', title: '', question: '', choices: [], correct: '', answer: '' }
   grading = false
-  faCheck = faCheck; faTimes = faTimes
   answer = ''
   grade = () => { this.grading = true; }
 
