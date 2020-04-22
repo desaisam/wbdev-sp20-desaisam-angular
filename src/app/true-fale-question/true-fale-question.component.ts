@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+// import { EventEmitter } from 'protractor';
 
 
 @Component({
@@ -11,10 +12,18 @@ export class TrueFaleQuestionComponent implements OnInit {
   constructor() { }
 
   @Input()
-  question = { _id: '', title: '', question: '', answer: '', correct: '' }
+  question = { _id: '', title: '', type: '', choices: [], correct: '', question: '' }
+  @Input()
+  answer = ''
+  @Output()
+  answerChange = new EventEmitter<string>()
+  submitAnswer = () => {
+    this.answerChange.emit(this.answer)
+
+
+  }
   grading = false
   grade = () => { this.grading = true }
-  answer = ''
   ngOnInit(): void {
   }
 

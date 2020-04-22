@@ -1,3 +1,6 @@
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
 .active a {
     color : white
 }
@@ -8,4 +11,3 @@
     text-align: center;
 }
 
-@import "~bootstrap/dist/css/bootstrap.min.css";

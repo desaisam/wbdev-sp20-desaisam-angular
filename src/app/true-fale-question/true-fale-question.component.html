@@ -6,25 +6,22 @@
                     'bg-danger' : (grading) &&  (answer === 'True') && (question.correct != 'true')
                     }">
 
-            <input name="{{question._id}}" value="True" [(ngModel)]="answer" type="radio" /> True
+            <input name="{{question._id}}" value="true" [(ngModel)]="answer" type="radio" /> True
 
             <i [ngClass]="{'fa-times': (grading) && (answer === 'True') && (question.correct === 'false'),
                            'fa-check': (grading) && (question.correct === 'true')
-                          }" 
-                          class = "fa float-right" 
-                          aria-hidden="true"></i>
+                          }" class="fa float-right" aria-hidden="true"></i>
         </li>
 
         <li class="list-group-item" [ngClass]="{'bg-success': (question.correct === 'false') && (grading),
                                                 'bg-danger' : (grading) &&  (answer === 'False') && (question.correct != 'false')
                                                }">
 
-            <input name="{{question._id}}" value="False" [(ngModel)]="answer" type="radio" /> False
+            <input name="{{question._id}}" value="false" [(ngModel)]="answer" type="radio" /> False
 
             <i [ngClass]="{'fa-times': (grading) && (answer === 'False') &&  (question.correct === 'true'),
                            'fa-check': (grading) && (question.correct === 'false')
-                          }" aria-hidden="true"
-                          class = "fa float-right"></i>
+                          }" aria-hidden="true" class="fa float-right"></i>
 
         </li>
     </ul>
@@ -35,6 +32,8 @@
     <button class="btn btn-secondary" (click)="grade()">
         Grade
     </button>
+    <button class="btn btn-primary" (click)="submitAnswer()">Submit Answer</button>
+
     <br>
     <br>
 </div>
